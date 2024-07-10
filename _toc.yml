@@ -1,0 +1,20 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Logistics
+    chapters:
+    - file: logistics/logistics-schedule
+    - file: logistics/logistics-setup
+
+  - caption: Lectures
+    chapters:
+    - file: lectures/lectures-one
+    - file: lectures/lectures-two
+
+  - caption: Tutorials
+    chapters:
+    - file: tutorials/tutorials-one
+    - file: tutorials/tutorials-two
