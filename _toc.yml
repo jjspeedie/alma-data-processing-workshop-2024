@@ -13,6 +13,7 @@ parts:
     chapters:
     - file: lectures/lectures-one
     - file: lectures/lectures-two
+    - file: lectures/training-whats-new-CASA-pipeline
 
   - caption: Tutorials
     chapters:
