@@ -1,21 +1,32 @@
 # Schedule
 
-Content placeholder
+Registration pages: to be done by Tues/Wed.
+
+Advertising: Consider making a graphic flyer/template (Emily Moravec at GBT). If there are places nearby, include slides in your talk to advertise.
+
+Registration: Ask about what OS they're operating.
+
 
 Materials/slides: https://astrocloud.nrao.edu/s/zBa2Abb5Sc33D92
 
+
+0. George's introductory slides (1 observatory, 4 world class facilities); NAASC support
 
 1. Introduction to what CASA is (a few of Devaky intro slides)
   * What's new in pipeline, mention ALMA WSU is coming
 
 2. CARTA demo, in combination with the ALMA archive. Loading data from multiple programs.
 
+3. The Weblog? Typical issues, re-imaging using the pipeline...
 
 
-3. Imaging; continuum and spectral line
+
+4. Imaging; continuum and spectral line
 * primary beam correction; masking; interactive/non-interactive; uvcontsub;
 
+5. Getting in the news/press releases
 
+6. SRDPs. AUDI. auto-selfcal
 
 
 

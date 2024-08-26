@@ -16,7 +16,7 @@ Phase vs. UVdist: What is special about the calibrators?
 SNR for self-calibration (slide 18)
 SNR>3 ina  solution time less than the time for significant phase variations for all baselines TO A SINGLE ANTENNA.
 
-LINK TO CRYSTAL BROGAN'S SELF CAL MEMO.
+LINK TO CRYSTAL BROGAN'S SELF CAL MEMO. https://arxiv.org/abs/1805.05266
 
 SNR for self calibration. Amplitude self-cal.
 
@@ -38,6 +38,9 @@ Self calibration resources:
 * VLA self-cal tutorial
 * Self Calibration pipeline preview
 
+
+
+Slide 16 is a VLA image, with auto-self cal.
 
 
 

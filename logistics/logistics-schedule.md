@@ -1,6 +1,11 @@
 # Schedule
 
-Content placeholder
+Registration pages: to be done by Tues/Wed.
+
+Advertising: Consider making a graphic flyer/template (Emily Moravec at GBT). If there are places nearby, include slides in your talk to advertise.
+
+Registration: Ask about what OS they're operating.
+
 
 Materials/slides: https://astrocloud.nrao.edu/s/zBa2Abb5Sc33D92
 
