@@ -6,16 +6,17 @@ root: intro
 parts:
   - caption: Logistics
     chapters:
+    - file: logistics/logistics-before-workshop
     - file: logistics/logistics-schedule
-    - file: logistics/logistics-setup
+    # - file: logistics/logistics-after-workshop
 
-  - caption: Lectures
-    chapters:
-    - file: lectures/lectures-one
-    - file: lectures/lectures-two
-    - file: lectures/training-whats-new-CASA-pipeline
-
-  - caption: Tutorials
-    chapters:
-    - file: tutorials/tutorials-one
-    - file: tutorials/tutorials-two
+  # - caption: Lectures
+  #   chapters:
+  #   - file: lectures/lectures-one
+  #   - file: lectures/lectures-two
+  #   - file: lectures/training-whats-new-CASA-pipeline
+  #
+  # - caption: Tutorials
+  #   chapters:
+  #   - file: tutorials/tutorials-one
+  #   - file: tutorials/tutorials-two
