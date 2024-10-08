@@ -1,0 +1,755 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Navigating the ALMA IF Pipeline + Weblog (Ed Starr ) &#8212; ALMA Ambassador Training</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/alma-pipeline-and-weblog-and-reimaging';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nrao-naasc.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/nrao-naasc.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    ALMA Data Reduction Workshop at the University of Victoria
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../logistics/logistics-before-workshop.html">Before the workshop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logistics/logistics-schedule.html">Program</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jjspeedie/alma-ambassador-training" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jjspeedie/alma-ambassador-training/issues/new?title=Issue%20on%20page%20%2Flectures/alma-pipeline-and-weblog-and-reimaging.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lectures/alma-pipeline-and-weblog-and-reimaging.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Navigating the ALMA IF Pipeline + Weblog (Ed Starr )</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Navigating the ALMA IF Pipeline + Weblog (Ed Starr )</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-material">Reference Material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casa-pipelines">CASA Pipelines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-the-if-calibration-steps">Overview of the IF Calibration Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-weblog">What is a Weblog?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-importdata">hif_importdata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hifa-flagdata">hifa_flagdata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#h-tsyscal-and-hifa-tsysflag">h_tsyscal and hifa_tsysflag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hifa-wvrgcalflag">hifa_wvrgcalflag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hifa-bandpass">hifa_bandpass</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hifa-spwphaseup">hifa_spwphaseup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#higa-gfluxscale">higa_gfluxscale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#higa-timegaincal">higa_timegaincal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-applycal">hif_applycal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-plotting-commands">Retrieve plotting commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-issues-in-amp-vs-time-phase-vs-time">Typical issues in amp vs. time // phase vs. time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-issues-in-amp-vs-freq">Typical issues in amp vs. freq</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-issues-in-target-data">Typical issues in target data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-makeimages-cals">hif_makeimages (cals)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-rouse-imaging">Check rouse Imaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renorm-skipped">Renorm (skipped)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-findcont">hif_findcont</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-makeimlist-and-hif-makeimages">hif_makeimlist and hif_makeimages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-selfcal">hif_selfcal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-ahead">Looking Ahead</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#re-running-the-imaging-pipeline-tristan-ashton">Re-running the Imaging Pipeline (Tristan Ashton)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outline">Outline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure-delivered-data">Directory structure (delivered data)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-piperestorescript-py">Using piperestorescript.py</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nrao-srdp-audi">NRAO SRDP/AUDI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-re-run-the-calibration-pipeline-if-needed">How to re-run the calibration pipeline if needed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline-helper-text-files">Pipeline helper text files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-running-the-calibration">Re-running the calibration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-the-imaging-pipeline">How to run the imaging pipeline</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restore-calibration-and-prepare-for-re-imaging">Restore Calibration and Prepare for Re-imaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scriptforreprocessing">scriptForReprocessing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="navigating-the-alma-if-pipeline-weblog-ed-starr">
+<h1>Navigating the ALMA IF Pipeline + Weblog (Ed Starr )<a class="headerlink" href="#navigating-the-alma-if-pipeline-weblog-ed-starr" title="Permalink to this heading">#</a></h1>
+<p>(There is a SD/single-dish pipeline as well)</p>
+<section id="reference-material">
+<h2>Reference Material<a class="headerlink" href="#reference-material" title="Permalink to this heading">#</a></h2>
+<p>Videos: EU ARC Network “ALMA Weblog Inspection”, and i-Train</p>
+</section>
+<section id="casa-pipelines">
+<h2>CASA Pipelines<a class="headerlink" href="#casa-pipelines" title="Permalink to this heading">#</a></h2>
+<p>What is a pipeline? High-level look; a series of CASA tasks for calibrating raw data and imaging the corrected data. A recipe. Different recipe for IF and SD, and ALMA and VLA and VLASS.</p>
+<p>The easiest way for a user to run it: <a class="reference external" href="http://pipescript.py">pipescript.py</a> (execfile).</p>
+<p>The tasks all start with H (heuristics). IF means interferometry. A means ALMA. SD means single dish.</p>
+<p>SOUS/GOUS/MOUS breakdown; the pipeline is run on the MOUS level.</p>
+</section>
+<section id="overview-of-the-if-calibration-steps">
+<h2>Overview of the IF Calibration Steps<a class="headerlink" href="#overview-of-the-if-calibration-steps" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>System temperature (Tsys vs. frequency)</p></li>
+<li><p>Antenna position</p></li>
+<li><p>Water vapor</p></li>
+<li><p>Bandpass (per channel)</p></li>
+<li><p>Flux (per SPW)</p></li>
+<li><p>Gain</p></li>
+<li><p>Renorm</p></li>
+</ol>
+<p>Imaging:</p>
+<ol class="arabic simple" start="8">
+<li><p>Continuum detection, fitting and subtraction</p></li>
+<li><p>Continuum images per SPW</p></li>
+<li><p>Agregate continuum image for all SPWs combined</p></li>
+<li><p>Cube images for lines</p></li>
+<li><p>Self-calibration (NEW AS OF CYCLE 10)</p></li>
+<li><p>Repeat all imaging if self-cal was beneficial</p></li>
+</ol>
+</section>
+<section id="what-is-a-weblog">
+<h2>What is a Weblog?<a class="headerlink" href="#what-is-a-weblog" title="Permalink to this heading">#</a></h2>
+<p>A follow-along.</p>
+<p>QA2 report. These come straight from the archive (CASA 5.4).</p>
+<p>Very nice follow along. Tab by tab. Scan lengths in Weblog.</p>
+<section id="hif-importdata">
+<h3>hif_importdata<a class="headerlink" href="#hif-importdata" title="Permalink to this heading">#</a></h3>
+<p>Want the calibrator to be within a couple days.</p>
+</section>
+<section id="hifa-flagdata">
+<h3>hifa_flagdata<a class="headerlink" href="#hifa-flagdata" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="h-tsyscal-and-hifa-tsysflag">
+<h3>h_tsyscal and hifa_tsysflag<a class="headerlink" href="#h-tsyscal-and-hifa-tsysflag" title="Permalink to this heading">#</a></h3>
+<p>The pipeline is great at flagging. Vampire teeth is correlator issue. Edge channels is common.</p>
+<p>tsyscal is BEFORE flagging; tsysflag is AFTER flagging.</p>
+</section>
+<section id="hifa-wvrgcalflag">
+<h3>hifa_wvrgcalflag<a class="headerlink" href="#hifa-wvrgcalflag" title="Permalink to this heading">#</a></h3>
+<p>Want reg and green to be tight along zero.</p>
+</section>
+<section id="hifa-bandpass">
+<h3>hifa_bandpass<a class="headerlink" href="#hifa-bandpass" title="Permalink to this heading">#</a></h3>
+<p>The main page shows plots from reference antenna only, so recommend clicking through to get per spw, per antenna, etc. Best idea: filter by SPW (should look similar for all antennas).</p>
+<p>Missed a lot of this.</p>
+</section>
+<section id="hifa-spwphaseup">
+<h3>hifa_spwphaseup<a class="headerlink" href="#hifa-spwphaseup" title="Permalink to this heading">#</a></h3>
+<p>Everything is below green line of 30 degrees which is fantastic; red is after applying them, green is before.</p>
+</section>
+<section id="higa-gfluxscale">
+<h3>higa_gfluxscale<a class="headerlink" href="#higa-gfluxscale" title="Permalink to this heading">#</a></h3>
+<p>Comparing flux calibrator to the flux calibrator in the catalog.</p>
+</section>
+<section id="higa-timegaincal">
+<h3>higa_timegaincal<a class="headerlink" href="#higa-timegaincal" title="Permalink to this heading">#</a></h3>
+<p>NOT the corrected data; these are the solutions, they’re doing what they’re supposed to do (correcting the data).</p>
+<p>Split into two parts: phase vs. time and amp vs. time. They’ll be applied to the data.</p>
+<p>Then the second part are diagnostic and not applied to the data.</p>
+</section>
+<section id="hif-applycal">
+<h3>hif_applycal<a class="headerlink" href="#hif-applycal" title="Permalink to this heading">#</a></h3>
+<p>The actual science target data; applies all the calibration tables.</p>
+<p>Amplitude vs. time gives you the antenna-based breakdown.</p>
+<p>Sometimes bandpass amplitude vs. time will fall off like waterfall (often cannot be fixed, due to weather).</p>
+</section>
+<section id="retrieve-plotting-commands">
+<h3>Retrieve plotting commands<a class="headerlink" href="#retrieve-plotting-commands" title="Permalink to this heading">#</a></h3>
+<p>Very useful.</p>
+</section>
+<section id="typical-issues-in-amp-vs-time-phase-vs-time">
+<h3>Typical issues in amp vs. time // phase vs. time<a class="headerlink" href="#typical-issues-in-amp-vs-time-phase-vs-time" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="typical-issues-in-amp-vs-freq">
+<h3>Typical issues in amp vs. freq<a class="headerlink" href="#typical-issues-in-amp-vs-freq" title="Permalink to this heading">#</a></h3>
+<p>Overall nice collection. Whenever you have frequency on the x-axis, it might be a time-based effect.</p>
+</section>
+<section id="typical-issues-in-target-data">
+<h3>Typical issues in target data<a class="headerlink" href="#typical-issues-in-target-data" title="Permalink to this heading">#</a></h3>
+<p>Anything that looks fuzzy.</p>
+</section>
+<section id="hif-makeimages-cals">
+<h3>hif_makeimages (cals)<a class="headerlink" href="#hif-makeimages-cals" title="Permalink to this heading">#</a></h3>
+<p>Iteration 1 is lean image, iteration 0 is dirty.</p>
+</section>
+<section id="check-rouse-imaging">
+<h3>Check rouse Imaging<a class="headerlink" href="#check-rouse-imaging" title="Permalink to this heading">#</a></h3>
+<p>What is it? Used to assess calibration quality on a source other than a target. It’s a point-like target source that you apply your calibration solutions to, in order to check that they worked. Always a point source, usually dimmer than a calibrator.</p>
+</section>
+<section id="renorm-skipped">
+<h3>Renorm (skipped)<a class="headerlink" href="#renorm-skipped" title="Permalink to this heading">#</a></h3>
+<p>Due to strong line emission detected in auto-correlation.</p>
+<p>Used to be a big deal, now fixed, totally effective.</p>
+</section>
+<section id="hif-findcont">
+<h3>hif_findcont<a class="headerlink" href="#hif-findcont" title="Permalink to this heading">#</a></h3>
+<p>Conservative, not updated, doesn’t rely on uvcontsub.</p>
+</section>
+<section id="hif-makeimlist-and-hif-makeimages">
+<h3>hif_makeimlist and hif_makeimages<a class="headerlink" href="#hif-makeimlist-and-hif-makeimages" title="Permalink to this heading">#</a></h3>
+<p>These imaging commands can be copy and pasted and used as a script, just like the other tasks.</p>
+<p>Regular cal and selfcal.</p>
+<p>Can get image stats. Sensitivity rms is what’s used for QA process.</p>
+</section>
+<section id="hif-selfcal">
+<h3>hif_selfcal<a class="headerlink" href="#hif-selfcal" title="Permalink to this heading">#</a></h3>
+<p>Per solint, summary…</p>
+</section>
+<section id="looking-ahead">
+<h3>Looking Ahead<a class="headerlink" href="#looking-ahead" title="Permalink to this heading">#</a></h3>
+<p>Big change in Cycle 11: B2B calibration. Also: self-cal improvements.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="re-running-the-imaging-pipeline-tristan-ashton">
+<h1>Re-running the Imaging Pipeline (Tristan Ashton)<a class="headerlink" href="#re-running-the-imaging-pipeline-tristan-ashton" title="Permalink to this heading">#</a></h1>
+<p>Get images that conform to your science goals.</p>
+<section id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Obtain the calibrated measurement set (scriptForPI, piperestorescript, SRDP)</p></li>
+<li><p>How to re-run the calibration pipeline</p></li>
+<li><p>How to run the imagine pipeline</p></li>
+</ol>
+</section>
+<section id="directory-structure-delivered-data">
+<h2>Directory structure (delivered data)<a class="headerlink" href="#directory-structure-delivered-data" title="Permalink to this heading">#</a></h2>
+<p>Product: data delivery products (what pipeline created).</p>
+<p>“Raw” (has the raw data) and “calibration” (tables) but no “calibratED”. So you have to put those together.</p>
+<p>Easiest way to do that: scriptForPI (“script” directory).</p>
+<section id="using-piperestorescript-py">
+<h3>Using <a class="reference external" href="http://piperestorescript.py">piperestorescript.py</a><a class="headerlink" href="#using-piperestorescript-py" title="Permalink to this heading">#</a></h3>
+<p>It’s the thing that’s called by scriptForPI. You don’t need to worry about it.</p>
+</section>
+<section id="nrao-srdp-audi">
+<h3>NRAO SRDP/AUDI<a class="headerlink" href="#nrao-srdp-audi" title="Permalink to this heading">#</a></h3>
+<p>Will get a whole talk on it by John tomorrow.</p>
+</section>
+<section id="how-to-re-run-the-calibration-pipeline-if-needed">
+<h3>How to re-run the calibration pipeline if needed<a class="headerlink" href="#how-to-re-run-the-calibration-pipeline-if-needed" title="Permalink to this heading">#</a></h3>
+<p>casa_pipescript.py is for re-running the pipeline entirely. Why would you want to do this?</p>
+<ul class="simple">
+<li><p>Add flags</p></li>
+<li><p>Update fluxes</p></li>
+<li><p>Update baselines</p></li>
+<li><p>Use a new version of the pipeline</p></li>
+<li><p>Add or remove an ASDM</p></li>
+<li><p>Change reference antennas</p></li>
+</ul>
+</section>
+<section id="pipeline-helper-text-files">
+<h3>Pipeline helper text files<a class="headerlink" href="#pipeline-helper-text-files" title="Permalink to this heading">#</a></h3>
+<p>flux.csv, jyperk.csv, etc… They exist, and these are the things you’d edit for any of the listed purposes.</p>
+</section>
+<section id="re-running-the-calibration">
+<h3>Re-running the calibration<a class="headerlink" href="#re-running-the-calibration" title="Permalink to this heading">#</a></h3>
+<p>Set up your directory… <a class="reference external" href="http://almascience.nrao.edu/processing/science-pipeline">almascience.nrao.edu/processing/science-pipeline</a>. Then running it is as simple as running <a class="reference external" href="http://pipescript.py">pipescript.py</a>.</p>
+<p>Each of the lines correspond to the tasks in the weblog. Here’s where each of the helper txt files get used (the corresponding functions).</p>
+<p>There’s the calibration half and after there’s the imaging half. The imaging half is what we’ll talk about next. If you’re only re-doing the calibration, it’s recommended to comment-out the imaging half (all of them). If you comment out anything in the calibration step, it will break.</p>
+</section>
+<section id="how-to-run-the-imaging-pipeline">
+<h3>How to run the imaging pipeline<a class="headerlink" href="#how-to-run-the-imaging-pipeline" title="Permalink to this heading">#</a></h3>
+<p>See CASAGuide: Cycle 10 imaging pipeline re-processing. Can also see the same but for manually calibrated data (went through slightly different process).</p>
+<p>Why would you want to re-image and let the pipeline do it for you? List given there.</p>
+</section>
+<section id="restore-calibration-and-prepare-for-re-imaging">
+<h3>Restore Calibration and Prepare for Re-imaging<a class="headerlink" href="#restore-calibration-and-prepare-for-re-imaging" title="Permalink to this heading">#</a></h3>
+<p>Move to directory with calibrated data, make tweaks to any helper files (<a class="reference external" href="http://pipescipt.py">pipescipt.py</a> has calibration portion commented out); then start casa –pipeline, then do execfile(‘casa_pipescript.py’). Recommendation here is to use the latest version of CASA.</p>
+<p>Example CASA imaging pipeline script. Ignore all the context lines. What you want to look at is the content of the “try” block.</p>
+<p>imageprecheck chooses your robust parameter value for you; so if you want a specific robust value, don’t use the imageprecheck task.</p>
+<p>Bonus: Every time you run pipescript, a new weblog is always created!!</p>
+</section>
+<section id="scriptforreprocessing">
+<h3>scriptForReprocessing<a class="headerlink" href="#scriptforreprocessing" title="Permalink to this heading">#</a></h3>
+<p>This is something new that has been added into the added-value data delivereies; only the NA PI’s get this, starting in Cycle 9, no other nodes/ARCS/regions do this.</p>
+<p>Main delivery is: calibrated_final.tgz. This is individual calibrated ASDMs along with some of the …</p>
+<p>If you run scriptForReprocessing yourself, it will recreate identical images as from the original pipeline run.</p>
+<p>Honestly sounds like a really useful thing. Knowlwedge base articles: NA added value data products.</p>
+<!-- sys.exit() -->
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Navigating the ALMA IF Pipeline + Weblog (Ed Starr )</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-material">Reference Material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casa-pipelines">CASA Pipelines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview-of-the-if-calibration-steps">Overview of the IF Calibration Steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-weblog">What is a Weblog?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-importdata">hif_importdata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hifa-flagdata">hifa_flagdata</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#h-tsyscal-and-hifa-tsysflag">h_tsyscal and hifa_tsysflag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hifa-wvrgcalflag">hifa_wvrgcalflag</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hifa-bandpass">hifa_bandpass</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hifa-spwphaseup">hifa_spwphaseup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#higa-gfluxscale">higa_gfluxscale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#higa-timegaincal">higa_timegaincal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-applycal">hif_applycal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-plotting-commands">Retrieve plotting commands</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-issues-in-amp-vs-time-phase-vs-time">Typical issues in amp vs. time // phase vs. time</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-issues-in-amp-vs-freq">Typical issues in amp vs. freq</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-issues-in-target-data">Typical issues in target data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-makeimages-cals">hif_makeimages (cals)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-rouse-imaging">Check rouse Imaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#renorm-skipped">Renorm (skipped)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-findcont">hif_findcont</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-makeimlist-and-hif-makeimages">hif_makeimlist and hif_makeimages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hif-selfcal">hif_selfcal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#looking-ahead">Looking Ahead</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#re-running-the-imaging-pipeline-tristan-ashton">Re-running the Imaging Pipeline (Tristan Ashton)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outline">Outline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directory-structure-delivered-data">Directory structure (delivered data)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-piperestorescript-py">Using piperestorescript.py</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nrao-srdp-audi">NRAO SRDP/AUDI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-re-run-the-calibration-pipeline-if-needed">How to re-run the calibration pipeline if needed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pipeline-helper-text-files">Pipeline helper text files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#re-running-the-calibration">Re-running the calibration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-the-imaging-pipeline">How to run the imaging pipeline</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restore-calibration-and-prepare-for-re-imaging">Restore Calibration and Prepare for Re-imaging</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scriptforreprocessing">scriptForReprocessing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cycle 11 ALMA Ambassador Workshops (J. Speedie)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

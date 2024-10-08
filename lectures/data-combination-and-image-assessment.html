@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Data Combination and Image Assessment with ALMA (Sarah Wood) &#8212; ALMA Ambassador Training</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/data-combination-and-image-assessment';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/nrao-naasc.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/nrao-naasc.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    ALMA Data Reduction Workshop at the University of Victoria
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Logistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../logistics/logistics-before-workshop.html">Before the workshop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logistics/logistics-schedule.html">Program</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/jjspeedie/alma-ambassador-training" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/jjspeedie/alma-ambassador-training/issues/new?title=Issue%20on%20page%20%2Flectures/data-combination-and-image-assessment.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lectures/data-combination-and-image-assessment.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Combination and Image Assessment with ALMA (Sarah Wood)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#considerations">Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combination-methods">Combination methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sdint-imaging-casa-docs-page">Sdint-imaging CASA docs page</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-combination-hands-on-portion">Data Combination (hands on portion)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data-combination-and-image-assessment-with-alma-sarah-wood">
+<h1>Data Combination and Image Assessment with ALMA (Sarah Wood)<a class="headerlink" href="#data-combination-and-image-assessment-with-alma-sarah-wood" title="Permalink to this heading">#</a></h1>
+<p>A really hot topic right now.</p>
+<p>ALMA is three arrays in one.</p>
+<p>Where the antennas came from, Morita array, the different baselines.</p>
+<p>Highlighting cycle 11 configurations.</p>
+<p>Table 7.5 of the ALMA Technical Handbook. You can’t just combine things willy nilly, they need to be overlapped.</p>
+<p>Why would we want to combine configurations? The “short-spacing” problem.</p>
+<p>Zero-spacing problem (Koda+2019).</p>
+<p>Plunkett et al. (2023): Used PHANGS skymodel and M100 (cycle 0 real data).</p>
+<section id="considerations">
+<h2>Considerations<a class="headerlink" href="#considerations" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Overlapping baselines.</p></li>
+<li><p>Weights. That’s where the integration time differences come into play.</p></li>
+<li><p>rms, similar idea.</p></li>
+<li><p>Dynamic range…</p></li>
+</ol>
+</section>
+<section id="combination-methods">
+<h2>Combination methods<a class="headerlink" href="#combination-methods" title="Permalink to this heading">#</a></h2>
+<p>We’ll use feather, it’s the currently recommended version. It’s well known. Next is sdint, but is not out of experimental phase yet.</p>
+<section id="sdint-imaging-casa-docs-page">
+<h3>Sdint-imaging CASA docs page<a class="headerlink" href="#sdint-imaging-casa-docs-page" title="Permalink to this heading">#</a></h3>
+<p>For comparison to feather. Feather paper: Bill Cotton et al. 2017 in PASP, Fourier Plane something something. Not jointly deconvolving.</p>
+</section>
+</section>
+<section id="data-combination-hands-on-portion">
+<h2>Data Combination (hands on portion)<a class="headerlink" href="#data-combination-hands-on-portion" title="Permalink to this heading">#</a></h2>
+<p>M100 data CASAGuide (Band 3 combine 6.5.4). Baseline subtracted (.bl) is like trendline subtracted.</p>
+<p>How do we get an image that has all the data AND all the flux?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_*m.ms.listobs&#39;</span><span class="p">)</span>
+<span class="n">listobs</span><span class="p">(</span><span class="s1">&#39;M100_Band3_12m_CalibratedData.ms&#39;</span><span class="p">,</span><span class="n">listfile</span><span class="o">=</span><span class="s1">&#39;M100_12m.ms.listobs&#39;</span><span class="p">)</span>
+<span class="n">listobs</span><span class="p">(</span><span class="s1">&#39;M100_Band3_7m_CalibratedData.ms&#39;</span><span class="p">,</span><span class="n">listfile</span><span class="o">=</span><span class="s1">&#39;M100_7m.ms.listobs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Strange that they have different spectral setups; likely because SV data.</p>
+<p>CHECK THE WEIGHTS. We will skip this today. Check the CASA guides and there’s also a memo. As of CASA 4.2.2 has solidified. The rms ~ 1/sigma**2. See the page called “data weights”.</p>
+<p>Split out CO SPWs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_12m_CO.ms&#39;</span><span class="p">)</span>
+<span class="n">split</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;M100_Band3_12m_CalibratedData.ms&#39;</span><span class="p">,</span>
+      <span class="n">outputvis</span><span class="o">=</span><span class="s1">&#39;M100_12m_CO.ms&#39;</span><span class="p">,</span><span class="n">spw</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="n">field</span><span class="o">=</span><span class="s1">&#39;M100&#39;</span><span class="p">,</span>
+      <span class="n">datacolumn</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">keepflags</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_7m_CO.ms&#39;</span><span class="p">)</span>
+<span class="n">split</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;M100_Band3_7m_CalibratedData.ms&#39;</span><span class="p">,</span>
+      <span class="n">outputvis</span><span class="o">=</span><span class="s1">&#39;M100_7m_CO.ms&#39;</span><span class="p">,</span><span class="n">spw</span><span class="o">=</span><span class="s1">&#39;3,5&#39;</span><span class="p">,</span><span class="n">field</span><span class="o">=</span><span class="s1">&#39;M100&#39;</span><span class="p">,</span>
+      <span class="n">datacolumn</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="n">keepflags</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This step is not really needed; you can just go ahead and use the tclean with different spws.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_combine_CO.ms&#39;</span><span class="p">)</span>
+<span class="n">concat</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;M100_12m_CO.ms&#39;</span><span class="p">,</span><span class="s1">&#39;M100_7m_CO.ms&#39;</span><span class="p">],</span>
+       <span class="n">concatvis</span><span class="o">=</span><span class="s1">&#39;M100_combine_CO.ms&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Concatenate the data. Now we should have a MS that has 3 SPWs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf &#39;</span> <span class="o">+</span> <span class="s1">&#39;M100_combine12+7_CO_cube&#39;</span> <span class="o">+</span> <span class="s1">&#39;.*&#39;</span><span class="p">)</span>
+<span class="n">tclean</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;M100_combine_CO.ms&#39;</span><span class="p">,</span>
+    <span class="n">imagename</span><span class="o">=</span><span class="s1">&#39;M100_combine12+7_CO_cube&#39;</span><span class="p">,</span>
+    <span class="n">gridder</span><span class="o">=</span><span class="s1">&#39;mosaic&#39;</span><span class="p">,</span>
+    <span class="n">pbmask</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">imsize</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span>
+    <span class="n">cell</span><span class="o">=</span><span class="s1">&#39;0.5arcsec&#39;</span><span class="p">,</span>
+    <span class="n">weighting</span><span class="o">=</span><span class="s1">&#39;briggsbwtaper&#39;</span><span class="p">,</span> <span class="c1"># it helps flatten out the beam over the channels</span>
+    <span class="n">robust</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+    <span class="n">phasecenter</span><span class="o">=</span><span class="s1">&#39;J2000 12h22m54.9 +15d49m15&#39;</span><span class="p">,</span>
+    <span class="n">specmode</span><span class="o">=</span><span class="s1">&#39;cube&#39;</span><span class="p">,</span>
+    <span class="n">width</span><span class="o">=</span><span class="s1">&#39;5km/s&#39;</span><span class="p">,</span>
+    <span class="n">start</span><span class="o">=</span><span class="s1">&#39;1400km/s&#39;</span><span class="p">,</span>
+    <span class="n">nchan</span><span class="o">=</span><span class="mi">70</span><span class="p">,</span>
+    <span class="n">restfreq</span><span class="o">=</span><span class="s1">&#39;115.271201800GHz&#39;</span><span class="p">,</span> <span class="c1"># more modern datasets, tclean can pull this out the header</span>
+    <span class="n">outframe</span><span class="o">=</span><span class="s1">&#39;LSRK&#39;</span><span class="p">,</span>
+    <span class="n">restoringbeam</span><span class="o">=</span><span class="s1">&#39;common&#39;</span><span class="p">,</span>
+    <span class="n">mosweight</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">niter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="c1">#10000,</span>
+    <span class="n">threshold</span><span class="o">=</span><span class="s1">&#39;0.03mJy&#39;</span><span class="p">,</span>
+    <span class="n">usemask</span><span class="o">=</span><span class="s1">&#39;auto-multithresh&#39;</span><span class="p">,</span>
+    <span class="n">sidelobethreshold</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+    <span class="n">noisethreshold</span><span class="o">=</span><span class="mf">4.25</span><span class="p">,</span>
+    <span class="n">minbeamfrac</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">lownoisethreshold</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">negativethreshold</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">growiterations</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span>
+    <span class="n">interactive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">pbcor</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>When combining 7m+12m data, the auto-masking should be closer to the 12m data (as a start).</p>
+<p><em>Prepare TP data for feathering</em></p>
+<ul class="simple">
+<li><p>Ensure the rest frequency used in the creation of the single-dish and array cubes was the same. (For pipeline-produced TP cubes, this may not be the case).</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">imhead</span><span class="p">(</span><span class="s1">&#39;M100_TP_CO_cube.spw3.image.bl&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;get&#39;</span><span class="p">,</span><span class="n">hdkey</span><span class="o">=</span><span class="s1">&#39;restfreq&#39;</span><span class="p">)</span>
+<span class="n">imhead</span><span class="p">(</span><span class="s1">&#39;M100_combine12+7_CO_cube.image&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;get&#39;</span><span class="p">,</span><span class="n">hdkey</span><span class="o">=</span><span class="s1">&#39;restfreq&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Make sure they match. If they differ by more than 1 MHz; you can fix them with imreframe.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_TP_CO_cube.regrid&#39;</span><span class="p">)</span>
+<span class="n">imregrid</span><span class="p">(</span><span class="n">imagename</span><span class="o">=</span><span class="s1">&#39;M100_TP_CO_cube.spw3.image.bl&#39;</span><span class="p">,</span>
+         <span class="n">template</span><span class="o">=</span><span class="s1">&#39;M100_combine12+7_CO_cube.image&#39;</span><span class="p">,</span>
+         <span class="n">axes</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+         <span class="n">output</span><span class="o">=</span><span class="s1">&#39;M100_TP_CO_cube.regrid&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Axes 0,1, are RA and Dec.</p>
+<p>[missed a step]</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_TP_CO_cube.regrid.subim&#39;</span><span class="p">)</span>
+<span class="n">imsubimage</span><span class="p">(</span><span class="n">imagename</span><span class="o">=</span><span class="s1">&#39;M100_TP_CO_cube.regrid&#39;</span><span class="p">,</span>
+           <span class="n">outfile</span><span class="o">=</span><span class="s1">&#39;M100_TP_CO_cube.regrid.subim&#39;</span><span class="p">,</span>
+           <span class="n">box</span><span class="o">=</span><span class="s1">&#39;219,148,612,579&#39;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_combine12+7_CO_cube.image.subim&#39;</span><span class="p">)</span>
+<span class="n">imsubimage</span><span class="p">(</span><span class="n">imagename</span><span class="o">=</span><span class="s1">&#39;M100_combine12+7_CO_cube.image&#39;</span><span class="p">,</span>
+           <span class="n">outfile</span><span class="o">=</span><span class="s1">&#39;M100_combine12+7_CO_cube.image.subim&#39;</span><span class="p">,</span>
+           <span class="n">box</span><span class="o">=</span><span class="s1">&#39;219,148,612,579&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Multiply the TP image by the 7m+12m primary beam response so they have a common response on the sky.
+You’re bringing down the sensitivity so they merge better together; so you don’t over-interpret there to be more large scale flux because of the disparate sensitivities…</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_combine12+7_CO_cube.pb.subim&#39;</span><span class="p">)</span>
+<span class="n">imsubimage</span><span class="p">(</span><span class="n">imagename</span><span class="o">=</span><span class="s1">&#39;M100_combine12+7_CO_cube.pb&#39;</span><span class="p">,</span>
+           <span class="n">outfile</span><span class="o">=</span><span class="s1">&#39;M100_combine12+7_CO_cube.pb.subim&#39;</span><span class="p">,</span>
+           <span class="n">box</span><span class="o">=</span><span class="s1">&#39;219,148,612,579&#39;</span><span class="p">)</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_TP_CO_cube.regrid.subim.depb&#39;</span><span class="p">)</span>
+<span class="n">immath</span><span class="p">(</span><span class="n">imagename</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;M100_TP_CO_cube.regrid.subim&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;M100_combine12+7_CO_cube.pb.subim&#39;</span><span class="p">],</span>
+       <span class="n">expr</span><span class="o">=</span><span class="s1">&#39;IM0*IM1&#39;</span><span class="p">,</span>
+       <span class="n">outfile</span><span class="o">=</span><span class="s1">&#39;M100_TP_CO_cube.regrid.subim.depb&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf M100_Feather_CO.image&#39;</span><span class="p">)</span>
+<span class="n">feather</span><span class="p">(</span><span class="n">imagename</span><span class="o">=</span><span class="s1">&#39;M100_Feather_CO.image&#39;</span><span class="p">,</span>
+        <span class="n">highres</span><span class="o">=</span><span class="s1">&#39;M100_combine12+7_CO_cube.image.subim&#39;</span><span class="p">,</span>
+        <span class="n">lowres</span><span class="o">=</span><span class="s1">&#39;M100_TP_CO_cube.regrid.subim.depb&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, feather.</p>
+<p>sdgain is a new parameter.</p>
+<p>Erica: GPT memo <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019AAS...23335403H/abstract">https://ui.adsabs.harvard.edu/abs/2019AAS…23335403H/abstract</a>
+<a class="reference external" href="https://library.nrao.edu/public/memos/gbt/GBT_300.pdf">https://library.nrao.edu/public/memos/gbt/GBT_300.pdf</a></p>
+<!-- sys.exit() -->
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lectures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#considerations">Considerations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combination-methods">Combination methods</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sdint-imaging-casa-docs-page">Sdint-imaging CASA docs page</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-combination-hands-on-portion">Data Combination (hands on portion)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Cycle 11 ALMA Ambassador Workshops (J. Speedie)
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

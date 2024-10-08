@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lecture 2 &#8212; ALMA Ambassador Training</title>
+    <title>SRDP Tools for ALMA data (and beyond!) &#8212; ALMA Ambassador Training</title>
   
   
   
@@ -61,7 +61,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/lectures-two';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lectures/SRDP-tools';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -229,7 +229,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/jjspeedie/alma-ambassador-training/issues/new?title=Issue%20on%20page%20%2Flectures/lectures-two.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/jjspeedie/alma-ambassador-training/issues/new?title=Issue%20on%20page%20%2Flectures/SRDP-tools.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -259,7 +259,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/lectures/lectures-two.md" target="_blank"
+      <li><a href="../_sources/lectures/SRDP-tools.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +328,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -339,11 +341,32 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lecture 2</h1>
+    <h1>SRDP Tools for ALMA data (and beyond!)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SRDP Tools for ALMA data (and beyond!)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-selfcal-evaluating-success">Auto-selfcal: Evaluating success</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-selfcal-available-versions">Auto-selfcal: Available versions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-development">Future development</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-alma-srdp-capabilities">Summary: ALMA SRDP Capabilities</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#live-demos">Live Demos</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nrao-archive-data-nrao-edu">NRAO archive data.nrao.edu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#audi-demo">AUDI demo</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#for-your-workshop">for your workshop</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -353,9 +376,55 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecture-2">
-<h1>Lecture 2<a class="headerlink" href="#lecture-2" title="Permalink to this heading">#</a></h1>
-<p>Content placeholder</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="srdp-tools-for-alma-data-and-beyond">
+<h1>SRDP Tools for ALMA data (and beyond!)<a class="headerlink" href="#srdp-tools-for-alma-data-and-beyond" title="Permalink to this heading">#</a></h1>
+<p>What is SRDP? It’s an observatory effort to make ALMA data easier to use. Leverage things like the pipeline and the cluster at NRAO. Provides users the compute and workflows to do most of the heavy processing, so you only need to take what you need. Basically, just want to make things easier for you.</p>
+<p>Selfcal has been included in AUDI since June 2023 (hif_selfcal).</p>
+<section id="auto-selfcal-evaluating-success">
+<h2>Auto-selfcal: Evaluating success<a class="headerlink" href="#auto-selfcal-evaluating-success" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="auto-selfcal-available-versions">
+<h2>Auto-selfcal: Available versions<a class="headerlink" href="#auto-selfcal-available-versions" title="Permalink to this heading">#</a></h2>
+<p>Stand-alone:</p>
+<ul class="simple">
+<li><p>pip installable! Not yet, but soon (few months).</p></li>
+</ul>
+</section>
+<section id="future-development">
+<h2>Future development<a class="headerlink" href="#future-development" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Eb to EB alignment pre-selfcal.</p></li>
+<li><p>Multi-configuration support</p></li>
+</ul>
+<p>Note: manual self-cal could yield better results sometimes. But, significant improvements probably not likely.</p>
+</section>
+<section id="summary-alma-srdp-capabilities">
+<h2>Summary: ALMA SRDP Capabilities<a class="headerlink" href="#summary-alma-srdp-capabilities" title="Permalink to this heading">#</a></h2>
+<p>Self-cal has been a big focus over the last couple years and happy with it. You can use it in the AUDI service.</p>
+<p>Note: No NRAO SRDP services are available through the ALMA archive. Only the NRAO archive.</p>
+<p>There’s ways to access the NRAO archive in a scripted manner.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="live-demos">
+<h1>Live Demos<a class="headerlink" href="#live-demos" title="Permalink to this heading">#</a></h1>
+<section id="nrao-archive-data-nrao-edu">
+<h2>NRAO archive <a class="reference external" href="http://data.nrao.edu">data.nrao.edu</a><a class="headerlink" href="#nrao-archive-data-nrao-edu" title="Permalink to this heading">#</a></h2>
+<p>Interface is a bit simpler than ALMA archive.</p>
+<p>The text search bar searches for absolutely everything; but you can also search in a controlled manner.</p>
+<p>Then look at the buttons; can click on what’s in the MOUS. Can click the button “Download Restored MS”.</p>
+<p>Sometimes it’s not restorable; that’ll be the case when something manual had to be done to a dataset. Other times it means there was a problem adjusting the calibrations. The fraction of non-restorable: 5-10% (more as you go back). Also do not let you restore TP data.</p>
+</section>
+<section id="audi-demo">
+<h2>AUDI demo<a class="headerlink" href="#audi-demo" title="Permalink to this heading">#</a></h2>
+<p>How many requests do you get per day? A few per week. But several per day for the calibrated MS downloads.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="for-your-workshop">
+<h1>for your workshop<a class="headerlink" href="#for-your-workshop" title="Permalink to this heading">#</a></h1>
+<p>The TW Hya MS will not work for auto-selfcal, the MS is missing the meta data.</p>
+<p>2017.1.00857.S program; AS 205A</p>
+<p><a class="reference external" href="https://www.cv.nrao.edu/~jtobin/weblog-2017.1.00857.S/html/index.html">https://www.cv.nrao.edu/~jtobin/weblog-2017.1.00857.S/html/index.html</a> (this is an example weblog for the whole AUDI process)</p>
+<!-- sys.exit() -->
 </section>
 
     <script type="text/x-thebe-config">
@@ -398,6 +467,33 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SRDP Tools for ALMA data (and beyond!)</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-selfcal-evaluating-success">Auto-selfcal: Evaluating success</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auto-selfcal-available-versions">Auto-selfcal: Available versions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#future-development">Future development</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-alma-srdp-capabilities">Summary: ALMA SRDP Capabilities</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#live-demos">Live Demos</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nrao-archive-data-nrao-edu">NRAO archive data.nrao.edu</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#audi-demo">AUDI demo</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#for-your-workshop">for your workshop</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
