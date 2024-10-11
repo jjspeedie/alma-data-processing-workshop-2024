@@ -19,7 +19,7 @@
 
 <a></a>
 
-* **Registration:** <a href="https://science.nrao.edu/facilities/alma/naasc-workshops/nrao-dr-uvic24/registration" target="_blank">Register here</a> (free)
+* **Registration:** <a href="https://science.nrao.edu/facilities/alma/naasc-workshops/nrao-dr-uvic24/registration" target="_blank">https://science.nrao.edu/facilities/alma/naasc-workshops/nrao-dr-uvic24/registration</a>
 
 * **Date:** Tuesday October 22, 2024
 

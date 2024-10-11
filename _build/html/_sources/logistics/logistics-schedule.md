@@ -1,26 +1,52 @@
 # Program
 
-Sessions 1-4 will be a combination of lecture-style talks and hands-on data processing tutorials. Slides and scripts will be provided for download closer to the workshop. 
+The workshop will be a combination of lecture-style talks and hands-on data processing tutorials. Slides and scripts will be provided for download closer to the date. Note this is a preliminary schedule, but the lunch and break times are confirmed.
 
 ```{card}
 
+**8:30am** Welcome (tea & coffee will be served)
+
+**9:00am** What is ALMA, Interferometry Basics, Archive Data Products
+
+**10:30am** _Morning break (coffee & fruit will be served)_
+
+**10:50am** Hands-on Tutorial (Intro to Imaging, Continuum & Spectral Line)
+
+**12:30pm** _Lunch (provided for in-person participants)_
+
+**1:30pm** Visualization with CARTA, Science Ready Data Products, CANFAR Science Portal
+
+**3:00pm** _Afternoon break (assorted pastries will be served)_
+
+**3:20pm** Hands-on Tutorial (Auto Self Calibration, Manual Self Calibration)
+
+**4:30pm** NRAO/NAASC Services, feedback survey
+
+**5:00pm** End of day
+
+```
+
+<!-- ```{card}
+
 **8:30am-9:00am:** Welcome (tea & coffee will be served)
 
-**9:00-10:30am:** Session 1
+**9:00-10:30am:** Session 1: What is ALMA, Interferometry Basics, Archive Data Products
 
 **10:30-10:50am:** Morning break (coffee & fruit will be served)
 
-**10:50am-12:30pm:** Session 2
+**10:50am-12:30pm:** Hands-on Tutorial (Intro to Imaging, Continuum & Spectral Line)
 
 **12:30pm-1:30pm:** Lunch (provided for in-person participants)
 
-**1:30-3:00pm:** Session 3
+**1:30-3:00pm:** Visualization with CARTA, Science Ready Data Products, CANFAR Science Portal
 
 **3:00-3:20pm:** Afternoon break (assorted pastries will be served)
 
-**3:20-5:00pm:** Session 4
+**3:20-4:30pm:** Hands-on Tutorial (Auto Self Calibration, Manual Self Calibration)
 
-```
+**4:30-5:00pm:** NRAO/NAASC Services, feedback survey
+
+``` -->
 
 <!-- Materials/slides: https://astrocloud.nrao.edu/s/zBa2Abb5Sc33D92 -->
 

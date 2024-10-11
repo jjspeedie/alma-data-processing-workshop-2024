@@ -353,9 +353,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primer-videos">Primer Videos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#necessary-software-casa-carta">Necessary software: CASA &amp; CARTA</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alma-tutorial-datasets">ALMA tutorial datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#watch-some-primer-videos">Watch some Primer Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-casa">Install CASA</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-casa-installation">Check CASA installation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-alma-tutorial-datasets">Download ALMA tutorial datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-carta">Install CARTA</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-the-day">On the day</a></li>
 </ul>
             </nav>
@@ -371,8 +375,8 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="before-the-workshop">
 <h1>Before the workshop<a class="headerlink" href="#before-the-workshop" title="Permalink to this heading">#</a></h1>
 <p>This page describes important pre-workshop tasks that will help you have a productive workshop experience.</p>
-<section id="primer-videos">
-<h2>Primer Videos<a class="headerlink" href="#primer-videos" title="Permalink to this heading">#</a></h2>
+<section id="watch-some-primer-videos">
+<h2>Watch some Primer Videos<a class="headerlink" href="#watch-some-primer-videos" title="Permalink to this heading">#</a></h2>
 <p>Please watch the following videos from the <strong>ALMA Primer Video Series</strong> before the start of the workshop:</p>
 <ul class="simple">
 <li><p>ALMA Primer Series: <a href="https://youtu.be/5RA9klRpvfY?si=xL5XMt3PyXJAtkPp" target="_blank">Introduction to Calibration</a></p></li>
@@ -382,24 +386,103 @@ document.write(`
 <!-- * ALMA Primer Series: Introduction to Calibration https://youtu.be/5RA9klRpvfY?si=xL5XMt3PyXJAtkPp
 * ALMA Primer Series: Introduction to CLEAN https://www.youtube.com/watch?v=fF3KetPUyFE
 * ALMA Primer Series: CLEAN Masking https://www.youtube.com/watch?v=50ouWFLOWaw -->
+<p>You may also have fun experimenting with generating interferometric images using the NRAO’s <strong>Interferometry Explained</strong> web-based tool:
+<a href="https://public.nrao.edu/interferometry-explained/" target="_blank">https://public.nrao.edu/interferometry-explained/</a></p>
 </section>
-<section id="necessary-software-casa-carta">
-<h2>Necessary software: CASA &amp; CARTA<a class="headerlink" href="#necessary-software-casa-carta" title="Permalink to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>We’ll have hands-on experience working with ALMA data during the tutorials. Please <strong>install the software</strong> we will be working with:</p></li>
-</ol>
-<ul class="simple">
-<li><p>CASA 6.6.5 (General Use): <a href="https://casa.nrao.edu/casa_obtaining.shtml" target="_blank">https://casa.nrao.edu/casa_obtaining.shtml</a></p></li>
-<li><p>CARTA v4.1: <a href="https://cartavis.org/#download" target="_blank">https://cartavis.org/#download</a></p></li>
-</ul>
+<section id="install-casa">
+<h2>Install CASA<a class="headerlink" href="#install-casa" title="Permalink to this heading">#</a></h2>
+<p>We’ll have some hands-on experience working with ALMA data during the tutorials. Please <strong>install CASA</strong>, the main software used to work with ALMA data. You will need CASA <strong>version 6.6.4</strong> or lower (but not lower than 6.5.*). Use the following dropdown menu to navigate to the right build for your operating system:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Mac OSX11<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Go to: <a href="https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx11/" target="_blank">https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx11/</a></p>
+<a class="mb-1 reference internal image-reference" href="../_images/osx11.png"><img alt="osx11" class="mb-1" src="../_images/osx11.png" style="width: 100%;" /></a>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Mac OSX12<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Go to: <a href="https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx12/" target="_blank">https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx12/</a></p>
+<a class="mb-1 reference internal image-reference" href="../_images/osx12.png"><img alt="osx12" class="mb-1" src="../_images/osx12.png" style="width: 100%;" /></a>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Mac OSX13<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Go to: <a href="https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx13/" target="_blank">https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx13/</a></p>
+<a class="mb-1 reference internal image-reference" href="../_images/osx13.png"><img alt="osx11" class="mb-1" src="../_images/osx13.png" style="width: 100%;" /></a>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Mac OSX14<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Go to: <a href="https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx14/" target="_blank">https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx14/</a></p>
+<a class="mb-1 reference internal image-reference" href="../_images/osx14.png"><img alt="osx14" class="mb-1" src="../_images/osx14.png" style="width: 100%;" /></a>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Mac OSX10.15<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Go to: <a href="https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx1015/" target="_blank">https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/osx1015/</a></p>
+<a class="mb-1 reference internal image-reference" href="../_images/osx1015.png"><img alt="osx1015" class="mb-1" src="../_images/osx1015.png" style="width: 100%;" /></a>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Linux (RedHat) rhel<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Go to: <a href="https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/rhel/" target="_blank">https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/rhel/</a></p>
+<a class="mb-1 reference internal image-reference" href="../_images/rhel.png"><img alt="rhel" class="mb-1" src="../_images/rhel.png" style="width: 100%;" /></a>
+</div>
+</details><!-- <a href="https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/" target="_blank">https://alma-dl.mtk.nao.ac.jp/ftp/casa/distro/casa/release/</a> -->
+<!-- * CASA 6.6.4 (General Use): <a href="https://casa.nrao.edu/casa_obtaining.shtml" target="_blank">https://casa.nrao.edu/casa_obtaining.shtml</a> -->
 <!-- Note that CASA requires a Linux-based environment to run. If you have a Mac OSX or a linux machine (ubuntu, etc), you should have no problems. If you have a PC, you will need to download some type of linux OS - I personally use WSL (Windows Subsystem for Linux) with Ubuntu installed, through the MobaXTerm tool.  -->
-<ol class="arabic simple" start="2">
-<li><p>Please <strong>check that you can start CASA</strong> before the first day of the workshop. In a terminal (linux command line), type:</p></li>
-</ol>
+<section id="check-casa-installation">
+<h3>Check CASA installation<a class="headerlink" href="#check-casa-installation" title="Permalink to this heading">#</a></h3>
+<p>Please <strong>check that you can start CASA</strong> before the first day of the workshop. In a terminal (linux command line), type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>casa
 </pre></div>
 </div>
-<p>CASA is built in iPython, and you will see a number of initialization messages, a list of available tasks, and, finally, a Python command line prompt:</p>
+<!-- If you have downloaded CASA v6.6.5, then you may meet the following error on the first startup:
+
+```
+casaconfig is trying to download data to /Users/jspeedie/.casa/data (measurespath)
+but the directory does not exist.
+To allow casa to download ~1GB of data to this path, please create this directory and re-start CASA.
+```
+
+Simply make the directory it needs:
+
+```
+mkdir ~/.casa/data
+```
+
+And then launch CASA again:
+
+```bash
+casa
+```
+
+More information can be found <a href="https://casadocs.readthedocs.io/en/stable/notebooks/external-data.html" target="_blank">here</a>.  -->
+<p>Upon a successful launch, you will see a number of initialization messages, a list of available tasks, and, finally, a Python command line prompt:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CASA<span class="w"> </span>&lt;<span class="m">1</span>&gt;:
 </pre></div>
 </div>
@@ -407,27 +490,32 @@ document.write(`
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CASA<span class="w"> </span>&lt;<span class="m">1</span>&gt;:<span class="w"> </span><span class="nb">exit</span>
 </pre></div>
 </div>
-<p>More details and tips can be found here: <a href="https://casaguides.nrao.edu/index.php/Getting_Started_in_CASA" target="_blank">Getting Started in CASA</a>.</p>
+<p>More details and tips can be found at: <a href="https://casaguides.nrao.edu/index.php/Getting_Started_in_CASA" target="_blank">Getting Started in CASA</a>.</p>
 </section>
-<section id="alma-tutorial-datasets">
-<h2>ALMA tutorial datasets<a class="headerlink" href="#alma-tutorial-datasets" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="download-alma-tutorial-datasets">
+<h2>Download ALMA tutorial datasets<a class="headerlink" href="#download-alma-tutorial-datasets" title="Permalink to this heading">#</a></h2>
 <p><strong>Download the ALMA datasets</strong> we will be working with:</p>
 <ol class="arabic simple">
-<li><p>TW Hya calibrated continuum measurement set (435 MB): <a href="https://bulk.cv.nrao.edu/almadata/public/ALMA_firstlooks/twhya_calibrated.ms.tar" target="_blank">Click to download twhya_calibrated.ms.tar</a></p></li>
+<li><p>TW Hya calibrated measurement set (435 MB): <a href="https://bulk.cv.nrao.edu/almadata/public/ALMA_firstlooks/twhya_calibrated.ms.tar" target="_blank">Click to download twhya_calibrated.ms.tar</a></p></li>
+<li><p>TW Hya self-calibrated measurement set (435 MB): <a href="https://bulk.cv.nrao.edu/almadata/public/ALMA_firstlooks/twhya_selfcal.ms.tar" target="_blank">Click to download twhya_selfcal.ms.tar</a></p></li>
 </ol>
-<p>Untar this dataset ahead of time:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-xvzf<span class="w"> </span>twhya_calibrated.ms.tar
-</pre></div>
-</div>
-<p>A directory should be created called <code class="docutils literal notranslate"><span class="pre">twhya_calibrated.ms</span></code>. This directory is the measurement set.</p>
-<ol class="arabic simple" start="2">
-<li><p>TW Hya self-calibrated line measurement set (435 MB): <a href="https://bulk.cv.nrao.edu/almadata/public/ALMA_firstlooks/twhya_selfcal.ms.tar" target="_blank">Click to download twhya_selfcal.ms.tar</a></p></li>
-</ol>
-<p>Untar this dataset too:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-xvzf<span class="w"> </span>twhya_selfcal.ms.tar
-</pre></div>
-</div>
-<p>A directory should be created called <code class="docutils literal notranslate"><span class="pre">twhya_selfcal.ms</span></code>. This directory is the measurement set.</p>
+<!-- If you wish, you can untar these datasets ahead of time:
+
+```bash
+tar -xvzf twhya_calibrated.ms.tar
+```
+or
+```bash
+tar -xvzf twhya_selfcal.ms.tar
+```
+
+A directory should be created called ``twhya_calibrated.ms`` or ``twhya_selfcal.ms``. This directory is the measurement set.
+ -->
+</section>
+<section id="install-carta">
+<h2>Install CARTA<a class="headerlink" href="#install-carta" title="Permalink to this heading">#</a></h2>
+<p>We will use CARTA for ALMA data visualization. <strong>Please install CARTA v4.1:</strong> <a href="https://cartavis.org/#download" target="_blank">https://cartavis.org/#download</a></p>
 </section>
 <section id="on-the-day">
 <h2>On the day<a class="headerlink" href="#on-the-day" title="Permalink to this heading">#</a></h2>
@@ -435,6 +523,7 @@ document.write(`
 <ul class="simple">
 <li><p>Laptop and charger.</p></li>
 </ul>
+<p>If you encounter any issues or have any questions, don’t hesitate to get in touch! Contact Jess at <a class="reference external" href="mailto:jspeedie&#37;&#52;&#48;uvic&#46;ca">jspeedie<span>&#64;</span>uvic<span>&#46;</span>ca</a></p>
 </section>
 </section>
 
@@ -505,9 +594,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#primer-videos">Primer Videos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#necessary-software-casa-carta">Necessary software: CASA &amp; CARTA</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#alma-tutorial-datasets">ALMA tutorial datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#watch-some-primer-videos">Watch some Primer Videos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-casa">Install CASA</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-casa-installation">Check CASA installation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#download-alma-tutorial-datasets">Download ALMA tutorial datasets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-carta">Install CARTA</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-the-day">On the day</a></li>
 </ul>
   </nav></div>
