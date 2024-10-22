@@ -6,21 +6,21 @@ The workshop will be a combination of lecture-style talks and hands-on data proc
 
 **8:30am** Welcome (tea & coffee will be served)
 
-**9:00am** What is ALMA, Interferometry Basics, Archive Data Products
+**9:00am** What is ALMA, Introduction to Radio Interferometry, Introduction to CASA & Imaging in CASA
 
 **10:30am** _Morning break (coffee & fruit will be served)_
 
-**10:50am** Hands-on Tutorial (Intro to Imaging, Continuum & Spectral Line)
+**10:50am** Hands-on Tutorials (Continuum Imaging, Spectral Line Imaging)
 
 **12:30pm** _Lunch (provided for in-person participants)_
 
-**1:30pm** Visualization with CARTA, Science Ready Data Products, CANFAR Science Portal
+**1:30pm** CANFAR Science Platform, The ALMA Archive, Science Ready Data Products & ALMA User-Defined Imaging, Visualization with CARTA (Demo)
 
 **3:00pm** _Afternoon break (assorted pastries will be served)_
 
-**3:20pm** Hands-on Tutorial (Auto Self Calibration, Manual Self Calibration)
+**3:20pm** Hands-on Tutorials (Auto Self-Calibration, Manual Self-Calibration)
 
-**4:30pm** NRAO/NAASC Services, feedback survey
+**4:30pm** NRAO/NAASC Services, Feedback Survey
 
 **5:00pm** End of day
 

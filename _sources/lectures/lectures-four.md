@@ -1,4 +1,4 @@
-# 1. What is ALMA?
+# 4. CANFAR Science Platform
 
 ::::{grid}
 :gutter: 2
@@ -7,7 +7,7 @@
 
 <center>
 
-<img src="./images/_01_What_Is_ALMA.png" alt="What_Is_ALMA" class="mb-1" width="98%">
+<img src="./images/_04_ARCADE.png" alt="ARCADE" class="mb-1" width="98%">
 
 </center>
 +++

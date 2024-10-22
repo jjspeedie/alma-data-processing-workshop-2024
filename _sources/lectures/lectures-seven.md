@@ -1,4 +1,4 @@
-# 1. What is ALMA?
+# 7. Visualization with CARTA
 
 ::::{grid}
 :gutter: 2
@@ -7,7 +7,7 @@
 
 <center>
 
-<img src="./images/_01_What_Is_ALMA.png" alt="What_Is_ALMA" class="mb-1" width="98%">
+<img src="./images/_07_CARTA.png" alt="CARTA" class="mb-1" width="98%">
 
 </center>
 +++

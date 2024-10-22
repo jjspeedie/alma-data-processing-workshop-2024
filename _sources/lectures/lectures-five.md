@@ -1,4 +1,4 @@
-# 1. What is ALMA?
+# 5. The ALMA Archive
 
 ::::{grid}
 :gutter: 2
@@ -7,7 +7,7 @@
 
 <center>
 
-<img src="./images/_01_What_Is_ALMA.png" alt="What_Is_ALMA" class="mb-1" width="98%">
+<img src="./images/_05_ALMA_Archive.png" alt="ALMA_Archive" class="mb-1" width="98%">
 
 </center>
 +++

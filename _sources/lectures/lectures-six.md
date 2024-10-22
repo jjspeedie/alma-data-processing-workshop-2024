@@ -1,4 +1,4 @@
-# 1. What is ALMA?
+# 6. Science Ready Data Products & ALMA User-Defined Imaging
 
 ::::{grid}
 :gutter: 2
@@ -7,7 +7,7 @@
 
 <center>
 
-<img src="./images/_01_What_Is_ALMA.png" alt="What_Is_ALMA" class="mb-1" width="98%">
+<img src="./images/_06_SRDP_AUDI.png" alt="SRDP_AUDI" class="mb-1" width="98%">
 
 </center>
 +++
