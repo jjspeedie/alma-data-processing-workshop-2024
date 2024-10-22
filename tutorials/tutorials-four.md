@@ -20,7 +20,7 @@ J. Speedie (jspeedie@uvic.ca) October 2024
 Your working directory should look like:
 
 ```bash
-TUTORIAL1 >> ls
+TUTORIAL4 >> ls
 script_manual_selfcal.py
 twhya_calibrated.ms.tar
 ```

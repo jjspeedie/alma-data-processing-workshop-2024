@@ -37,7 +37,7 @@ https://github.com/jjtobin/auto_selfcal
 Your working directory should look like:
 
 ```bash
-TUTORIAL1 >> ls
+TUTORIAL3 >> ls
 auto_selfcal-main/
 script_auto_selfcal_setup.py
 twhya_calibrated.ms.tar

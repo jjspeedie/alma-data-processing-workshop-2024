@@ -20,7 +20,7 @@ J. Speedie (jspeedie@uvic.ca) October 2024
 Your working directory should look like:
 
 ```bash
-TUTORIAL1 >> ls
+TUTORIAL2 >> ls
 script_spectral_line_imaging.py
 twhya_selfcal.ms.tar
 ```
