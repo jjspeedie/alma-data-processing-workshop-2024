@@ -13,7 +13,7 @@
 
 </center>
 +++
-<a href="https://" target="_blank">Download Slides</a>
+<a href="https://www.canfar.net/storage/vault/file/jspeedie/2024-alma-data-processing-workshop/_08_NRAO_NAASC_Services.pdf" target="_blank">Download Slides</a>
 :::
 
 :::{grid-item}

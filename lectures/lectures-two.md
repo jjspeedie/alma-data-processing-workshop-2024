@@ -11,7 +11,7 @@
 
 </center>
 +++
-<a href="https://" target="_blank">Download Slides</a>
+<a href="https://www.canfar.net/storage/vault/file/jspeedie/2024-alma-data-processing-workshop/_02_Introduction_to_Radio_Interferometry.pdf" target="_blank">Download Slides</a>
 :::
 
 :::{grid-item}

@@ -11,7 +11,7 @@
 
 </center>
 +++
-<a href="https://" target="_blank">Download Slides</a>
+<a href="https://www.canfar.net/storage/vault/list/helenkirk/Talks/ARCADE_tutorial.pdf" target="_blank">Download Slides</a>
 :::
 
 :::{grid-item}

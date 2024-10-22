@@ -11,7 +11,7 @@
 
 </center>
 +++
-<a href="https://" target="_blank">Download Slides</a>
+<a href="https://www.canfar.net/storage/vault/file/jspeedie/2024-alma-data-processing-workshop/_03_Introduction_to_CASA.pdf" target="_blank">Download Slides</a>
 :::
 
 :::{grid-item-card}
@@ -22,7 +22,7 @@
 
 </center>
 +++
-<a href="https://" target="_blank">Download Slides</a>
+<a href="https://www.canfar.net/storage/vault/file/jspeedie/2024-alma-data-processing-workshop/_03_Introduction_to_Imaging_in_CASA.pdf" target="_blank">Download Slides</a>
 :::
 
 ::::
