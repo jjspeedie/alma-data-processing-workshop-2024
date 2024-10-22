@@ -8,15 +8,24 @@ parts:
     chapters:
     - file: logistics/logistics-before-workshop
     - file: logistics/logistics-schedule
-    # - file: logistics/logistics-after-workshop
+    - file: logistics/logistics-after-workshop
 
-  # - caption: Lectures
-  #   chapters:
-  #   - file: lectures/lectures-one
-  #   - file: lectures/lectures-two
-  #   - file: lectures/training-whats-new-CASA-pipeline
+  - caption: Hands-on Tutorials
+    chapters:
+    - file: tutorials/tutorials-one
+    - file: tutorials/tutorials-two
+    - file: tutorials/tutorials-three
+    - file: tutorials/tutorials-four
+
+  - caption: Lectures
+    chapters:
+    - file: lectures/lectures-one
+    - file: lectures/lectures-two
+    - file: lectures/lectures-three
+    - file: lectures/lectures-four
+    - file: lectures/lectures-five
+    - file: lectures/lectures-six
+    - file: lectures/lectures-seven
+    - file: lectures/lectures-fin
+    # - file: lectures/training-whats-new-CASA-pipeline
   #
-  # - caption: Tutorials
-  #   chapters:
-  #   - file: tutorials/tutorials-one
-  #   - file: tutorials/tutorials-two

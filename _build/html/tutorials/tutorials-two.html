@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial 2 &#8212; ALMA Ambassador Training</title>
+    <title>Tutorial 2: Spectral Line Imaging &#8212; ALMA Ambassador Training</title>
   
   
   
@@ -64,6 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/tutorials-two';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tutorial 3: Automated Self-Calibration" href="tutorials-three.html" />
+    <link rel="prev" title="Tutorial 1: Continuum Imaging" href="tutorials-one.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -158,6 +160,25 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../logistics/logistics-before-workshop.html">Before the workshop</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../logistics/logistics-schedule.html">Program</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../logistics/logistics-after-workshop.html">After the workshop</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hands-on Tutorials</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tutorials-one.html">Tutorial 1: Continuum Imaging</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tutorial 2: Spectral Line Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials-three.html">Tutorial 3: Automated Self-Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials-four.html">Tutorial 4: Manual Self-Calibration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Lectures</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lectures/lectures-one.html">1. What is ALMA?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/lectures-two.html">2. Introduction to Interferometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/lectures-three.html">3. Introduction to CASA &amp; Imaging in CASA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/lectures-four.html">4. CANFAR Science Platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/lectures-five.html">5. The ALMA Archive</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/lectures-six.html">6. Science Ready Data Products &amp; ALMA User-Defined Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/lectures-seven.html">7. Visualization with CARTA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lectures/lectures-fin.html">8. NRAO &amp; NAASC Services</a></li>
 </ul>
 
     </div>
@@ -328,7 +349,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -339,11 +362,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial 2</h1>
+    <h1>Tutorial 2: Spectral Line Imaging</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-oriented-with-the-data">Getting oriented with the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-to-subtract-the-continuum">Prepare to subtract the continuum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-continuum-subtraction">Perform continuum subtraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-continuum-subtracted-data">Inspect the continuum-subtracted data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-the-science-target">Image the science target</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-primary-beam-correction">Perform primary beam correction</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -353,8 +389,171 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-2">
-<h1>Tutorial 2<a class="headerlink" href="#tutorial-2" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-2-spectral-line-imaging">
+<h1>Tutorial 2: Spectral Line Imaging<a class="headerlink" href="#tutorial-2-spectral-line-imaging" title="Permalink to this heading">#</a></h1>
+<div class="tip admonition">
+<p class="admonition-title"><a class="reference download internal" download="" href="../_downloads/aac83ac1a380c83e0e66e04ef7e3e72c/script_spectral_line_imaging.py"><span class="xref download myst">Link to Script</span></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">This</span> <span class="n">script</span> <span class="n">was</span> <span class="n">written</span> <span class="k">for</span> <span class="n">CASA</span> <span class="mf">6.6.4.34</span>
+<span class="n">Source</span><span class="p">:</span> <span class="n">First</span> <span class="n">Look</span> <span class="n">at</span> <span class="n">Line</span> <span class="n">Imaging</span> <span class="p">(</span><span class="n">CASA</span> <span class="n">Guide</span><span class="p">)</span>
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">casaguides</span><span class="o">.</span><span class="n">nrao</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">php</span><span class="o">/</span><span class="n">First_Look_at_Line_Imaging_CASA_6</span><span class="mf">.5.4</span>
+<span class="n">Adapted</span> <span class="k">for</span> <span class="n">ALMA</span> <span class="n">Data</span> <span class="n">Processing</span> <span class="n">Workshop</span> <span class="o">@</span> <span class="n">University</span> <span class="n">of</span> <span class="n">Victoria</span>
+<span class="n">J</span><span class="o">.</span> <span class="n">Speedie</span> <span class="p">(</span><span class="n">jspeedie</span><span class="nd">@uvic</span><span class="o">.</span><span class="n">ca</span><span class="p">)</span> <span class="n">October</span> <span class="mi">2024</span>
+</pre></div>
+</div>
+</div>
+<p><strong>Dataset:</strong> TW Hya self-calibrated N2H+ line+cont measurement set (435 MB)</p>
+<p><code class="docutils literal notranslate"><span class="pre">twhya_selfcal.ms.tar</span></code> (<a href="https://bulk.cv.nrao.edu/almadata/public/ALMA_firstlooks/twhya_selfcal.ms.tar" target="_blank">Download</a>)</p>
+<p>Your working directory should look like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>TUTORIAL1<span class="w"> </span>&gt;&gt;<span class="w"> </span>ls
+script_spectral_line_imaging.py
+twhya_selfcal.ms.tar
+</pre></div>
+</div>
+<p>Untar with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-xvzf<span class="w"> </span>twhya_selfcal.ms.tar
+</pre></div>
+</div>
+<section id="getting-oriented-with-the-data">
+<h2>Getting oriented with the data<a class="headerlink" href="#getting-oriented-with-the-data" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">listobs</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms&#39;</span><span class="p">,</span>
+        <span class="n">listfile</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal_listobs.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="prepare-to-subtract-the-continuum">
+<h2>Prepare to subtract the continuum<a class="headerlink" href="#prepare-to-subtract-the-continuum" title="Permalink to this heading">#</a></h2>
+<p>View amplitude vs. channel:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotms</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms&#39;</span><span class="p">,</span>
+       <span class="n">xaxis</span><span class="o">=</span><span class="s1">&#39;channel&#39;</span><span class="p">,</span>
+       <span class="n">yaxis</span><span class="o">=</span><span class="s1">&#39;amp&#39;</span><span class="p">,</span>
+       <span class="n">field</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">,</span>
+       <span class="n">avgspw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+       <span class="n">avgtime</span><span class="o">=</span><span class="s1">&#39;1e9&#39;</span><span class="p">,</span>
+       <span class="n">avgscan</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">avgbaseline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">showgui</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Save resulting plot as png file directly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotms</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms&#39;</span><span class="p">,</span>
+       <span class="n">xaxis</span><span class="o">=</span><span class="s1">&#39;channel&#39;</span><span class="p">,</span>
+       <span class="n">yaxis</span><span class="o">=</span><span class="s1">&#39;amp&#39;</span><span class="p">,</span>
+       <span class="n">field</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">,</span>
+       <span class="n">avgspw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+       <span class="n">avgtime</span><span class="o">=</span><span class="s1">&#39;1e9&#39;</span><span class="p">,</span>
+       <span class="n">avgscan</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">avgbaseline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">showgui</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+       <span class="n">plotfile</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms_amp-vs-channel.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="mb-1 reference internal image-reference" href="../_images/twhya_selfcal.ms_amp-vs-channel.png"><img alt="twhya_selfcal.ms_amp-vs-channel" class="mb-1" src="../_images/twhya_selfcal.ms_amp-vs-channel.png" style="width: 100%;" /></a>
+</div>
+</div>
+</section>
+<section id="perform-continuum-subtraction">
+<h2>Perform continuum subtraction<a class="headerlink" href="#perform-continuum-subtraction" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf twhya_selfcal.ms.contsub&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Perform the continuum subtraction:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">uvcontsub</span><span class="p">(</span><span class="n">vis</span> <span class="o">=</span> <span class="s1">&#39;twhya_selfcal.ms&#39;</span><span class="p">,</span>
+          <span class="n">field</span> <span class="o">=</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span>
+          <span class="n">fitspec</span> <span class="o">=</span> <span class="s1">&#39;0:0~239;281~383&#39;</span><span class="p">,</span>
+          <span class="n">fitorder</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="n">outputvis</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms.contsub&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="inspect-the-continuum-subtracted-data">
+<h2>Inspect the continuum-subtracted data<a class="headerlink" href="#inspect-the-continuum-subtracted-data" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">listobs</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms.contsub&#39;</span><span class="p">,</span>
+        <span class="n">listfile</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal_contsub_listobs.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>View amplitude vs. channel again:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotms</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms.contsub&#39;</span><span class="p">,</span>
+       <span class="n">xaxis</span><span class="o">=</span><span class="s1">&#39;channel&#39;</span><span class="p">,</span>
+       <span class="n">yaxis</span><span class="o">=</span><span class="s1">&#39;amp&#39;</span><span class="p">,</span>
+       <span class="n">field</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="c1"># TW Hya</span>
+       <span class="n">avgspw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+       <span class="n">avgtime</span><span class="o">=</span><span class="s1">&#39;1e9&#39;</span><span class="p">,</span>
+       <span class="n">avgscan</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">avgbaseline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">showgui</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Save resulting plot as png file directly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plotms</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms.contsub&#39;</span><span class="p">,</span>
+       <span class="n">xaxis</span><span class="o">=</span><span class="s1">&#39;channel&#39;</span><span class="p">,</span>
+       <span class="n">yaxis</span><span class="o">=</span><span class="s1">&#39;amp&#39;</span><span class="p">,</span>
+       <span class="n">field</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">,</span>
+       <span class="n">avgspw</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+       <span class="n">avgtime</span><span class="o">=</span><span class="s1">&#39;1e9&#39;</span><span class="p">,</span>
+       <span class="n">avgscan</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">avgbaseline</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">showgui</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+       <span class="n">plotfile</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms.contsub_amp-vs-channel.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<a class="mb-1 reference internal image-reference" href="../_images/twhya_selfcal.ms.contsub_amp-vs-channel.png"><img alt="twhya_selfcal.ms.contsub_amp-vs-channel" class="mb-1" src="../_images/twhya_selfcal.ms.contsub_amp-vs-channel.png" style="width: 100%;" /></a>
+</div>
+</div>
+</section>
+<section id="image-the-science-target">
+<h2>Image the science target<a class="headerlink" href="#image-the-science-target" title="Permalink to this heading">#</a></h2>
+<p>Set the rest frequency of the N2H+ molecular transition we are imaging:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">restfreq</span> <span class="o">=</span> <span class="s1">&#39;372.67249GHz&#39;</span> <span class="c1"># N2H+ rest frequency https://splatalogue.online/#/basic</span>
+</pre></div>
+</div>
+<p>To auto-mask and image non-interactively:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf twhya_n2hp.*&#39;</span><span class="p">)</span>
+<span class="n">tclean</span><span class="p">(</span><span class="n">vis</span><span class="o">=</span><span class="s1">&#39;twhya_selfcal.ms.contsub&#39;</span><span class="p">,</span>
+       <span class="n">imagename</span><span class="o">=</span><span class="s1">&#39;twhya_n2hp&#39;</span><span class="p">,</span>
+       <span class="n">field</span><span class="o">=</span><span class="s1">&#39;5&#39;</span><span class="p">,</span>
+       <span class="n">spw</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span>
+       <span class="n">specmode</span><span class="o">=</span><span class="s1">&#39;cube&#39;</span><span class="p">,</span>
+       <span class="n">perchanweightdensity</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">nchan</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span>
+       <span class="n">start</span><span class="o">=</span><span class="s1">&#39;0.0km/s&#39;</span><span class="p">,</span>
+       <span class="n">width</span><span class="o">=</span><span class="s1">&#39;0.5km/s&#39;</span><span class="p">,</span>
+       <span class="n">outframe</span><span class="o">=</span><span class="s1">&#39;LSRK&#39;</span><span class="p">,</span>
+       <span class="n">restfreq</span><span class="o">=</span><span class="n">restfreq</span><span class="p">,</span>
+       <span class="n">deconvolver</span><span class="o">=</span> <span class="s1">&#39;hogbom&#39;</span><span class="p">,</span>
+       <span class="n">gridder</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">,</span>
+       <span class="n">imsize</span><span class="o">=</span><span class="p">[</span><span class="mi">250</span><span class="p">,</span> <span class="mi">250</span><span class="p">],</span>
+       <span class="n">cell</span><span class="o">=</span><span class="s1">&#39;0.1arcsec&#39;</span><span class="p">,</span>
+       <span class="n">weighting</span><span class="o">=</span><span class="s1">&#39;briggsbwtaper&#39;</span><span class="p">,</span>
+       <span class="n">robust</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+       <span class="n">restoringbeam</span><span class="o">=</span><span class="s1">&#39;common&#39;</span><span class="p">,</span>
+       <span class="n">niter</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span>
+       <span class="n">interactive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+       <span class="n">nmajor</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="c1"># runs 1 major cycle and stops</span>
+       <span class="n">usemask</span><span class="o">=</span><span class="s1">&#39;auto-multithresh&#39;</span><span class="p">,</span> <span class="c1"># Automasking parameters below this line</span>
+       <span class="n">noisethreshold</span><span class="o">=</span><span class="mf">4.25</span><span class="p">,</span>
+       <span class="n">sidelobethreshold</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+       <span class="n">lownoisethreshold</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+       <span class="n">minbeamfrac</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+       <span class="n">negativethreshold</span><span class="o">=</span><span class="mf">15.0</span><span class="p">,</span>
+       <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+       <span class="n">fastnoise</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="perform-primary-beam-correction">
+<h2>Perform primary beam correction<a class="headerlink" href="#perform-primary-beam-correction" title="Permalink to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;rm -rf twhya_n2hp.pbcor.image&#39;</span><span class="p">)</span>
+<span class="n">impbcor</span><span class="p">(</span><span class="n">imagename</span><span class="o">=</span><span class="s1">&#39;twhya_n2hp.image&#39;</span><span class="p">,</span>
+        <span class="n">pbimage</span><span class="o">=</span><span class="s1">&#39;twhya_n2hp.pb&#39;</span><span class="p">,</span>
+        <span class="n">outfile</span><span class="o">=</span><span class="s1">&#39;twhya_n2hp.pbcor.image&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Open &amp; inspect resulting <code class="docutils literal notranslate"><span class="pre">twhya_n2hp*</span></code> files in CARTA!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -388,6 +587,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="tutorials-one.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tutorial 1: Continuum Imaging</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="tutorials-three.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tutorial 3: Automated Self-Calibration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -397,6 +614,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-oriented-with-the-data">Getting oriented with the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prepare-to-subtract-the-continuum">Prepare to subtract the continuum</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-continuum-subtraction">Perform continuum subtraction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspect-the-continuum-subtracted-data">Inspect the continuum-subtracted data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#image-the-science-target">Image the science target</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-primary-beam-correction">Perform primary beam correction</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
