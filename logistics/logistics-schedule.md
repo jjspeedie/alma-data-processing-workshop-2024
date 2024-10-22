@@ -1,6 +1,6 @@
 # Program
 
-The workshop will be a combination of lecture-style talks and hands-on data processing tutorials. Slides and scripts will be provided for download closer to the date. Note this is a preliminary schedule, but the lunch and break times are confirmed.
+<!-- The workshop will be a combination of lecture-style talks and hands-on data processing tutorials. Slides and scripts will be provided for download closer to the date. Note this is a preliminary schedule, but the lunch and break times are confirmed. -->
 
 ```{card}
 
