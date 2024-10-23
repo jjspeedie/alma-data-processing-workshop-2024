@@ -1,5 +1,7 @@
 # Tutorial 4: Manual Self-Calibration
 
+ALMA Primer Video Series: <a href="https://www.youtube.com/watch?v=_stkPfQrcFI" target="_blank">An Introduction to Self-Calibration</a>
+
 `````{admonition} [Link to Script](./scripts/script_manual_selfcal.py)
 :class: tip
 
